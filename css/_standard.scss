@@ -1,0 +1,64 @@
+*,*::before,*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+//Start of error,success and message styling
+
+.form-message {
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+}
+
+.form-message .success, .form-message .error {
+    position: absolute;
+    top:38%;
+    left: 95%;
+    visibility: hidden;
+}
+
+.success .success {
+  color: #32cd32;
+  visibility: visible;
+}
+
+.error .error{
+    color: #dc143c;
+    visibility: visible;
+}
+
+.form-message small {
+    position: absolute;
+    left: 2%;
+    top: 95%;
+    font-weight: bolder;
+    visibility: hidden;
+}
+
+.error small {
+    color: #dc143c;
+    visibility: visible;
+}
+
+.form-container .success input {
+    border:2px solid #32cd32;
+}
+
+.form-container .error input {
+    border:2px solid #dc143c;
+}
+//End of error,success and message styling
+
+$mobile : 768px;
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+   }
+}

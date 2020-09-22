@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPurchase.com</title>
+    <!--linking files-->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="/js/all.js"></script>
+</head>
+<body>
+    
+    <div class="container" id="container">
+
+        <!--Start of user signUp div-->
+        <div class="form-container user-signUp-container">
+            <form action="#" method="POST" id="form-sign-up" class="form">
+                <h1 class="sign">create myPURCHASE account</h1>
+                <div class="form-message">
+                    <input type="text" placeholder="FullName" id="fullname">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="email" placeholder="Email" id="email-create">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Password" id="password-create">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Confirm Password" id="confirm-password">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <button class="button">sign up</button>
+            </form>
+        </div>
+        <!--End of user signUp div-->
+
+        <!--Start of user signIn div-->
+        <div class="form-container user-signIn-container">
+            <form action="/html/home.html" method="POST" id="form-sign-in" class="form">
+                <h1 class="sign">sign in</h1>
+                <div class="form-message">
+                    <input type="email" placeholder="Email" id="email">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Password" id="password">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <a href="#">forgot password</a>
+                <button class="button" id="sign-in">sign in</button>
+                <a href="/html/admin.html" class="text-uppercase mt-5">sign in as admin</a>
+            </form>
+        </div>
+        <!--End of user signIn div-->
+
+        <!-- Start of User info for signIn and signUp -->
+        <div class="info-container">
+            <div class="info">
+
+                <div class="info-panel info-left">
+                    <marquee>let's sign in!</marquee>
+                    <p>If you already have an account you can log in with your personal details by clicking the button below</p>
+                    <button class="button" id="sign-in-info">sign in</button>
+                </div>
+
+                <div class="info-panel info-right">
+                    <marquee>Welcome to myPURCHASE!</marquee>
+                    <p>Enter your personal details and start your journey with us. You can also Sign Up if you dont have an account with us by clicking the link below</p>
+                    <button class="button" id="sign-up-info">sign up</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- End of User info for signIn and signUp-->
+
+    </div>
+
+
+
+    <!--linking js files-->
+    <script type="module" src="/js/index.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+</body>
+</html>

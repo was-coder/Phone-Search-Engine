@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPURCHASE.com/admin</title>
+    <!-- Linking files -->
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="/js/all.js"></script>
+</head>
+<body>
+    <!-- Start of header -->
+    <header class="py-1">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="text-white">myPURCHASE</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="text-capitalize">back</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End of header -->
+
+    <!-- Start of main section -->
+    <section>
+        <div class="container">
+
+            <!-- Start of toggle buttons -->
+            <div class="toggle-div">
+                <div id="btn"></div>
+                <button class="toggle-btn" onclick="signIn()">sign in</button>
+                <button class="toggle-btn" onclick="signUp()">sign up</button>
+            </div>
+            <!-- End of toggle buttons -->
+
+
+            <!-- Start of sign in form -->
+            <form action="#" method="POST" class="form" id="admin-sign-in">
+                <div class="form-message">
+                    <input type="text" placeholder="Admin Id" id="admin" class="form-input">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Admin Passcode" id="passcode" class="form-input">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <button class="sign">sign in</button>
+            </form>
+            <!-- End of sign in form -->
+
+            <!-- Start of sign up form -->
+            <form action="#" method="POST" class="form" id="admin-sign-up">
+                <div class="form-message">
+                    <input type="text" placeholder="Admin Id" id="admin-create" class="form-input">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Admin Passcode" id="passcode-create" class="form-input">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <div class="form-message">
+                    <input type="password" placeholder="Confirm Admin Passcode" id="confirm-passcode" class="form-input">
+                    <i class="fas fa-check-circle success"></i>
+                    <i class="fas fa-exclamation-circle error"></i>
+                    <small></small>
+                </div>
+                <button class="sign">sign up</button>
+            </form>
+            <!-- End of sign up form -->
+
+        </div>
+    </section>
+    <!-- End of main section -->
+
+    <!-- linking js files -->
+    <script src="/js/admin.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+
+</body>
+</html>

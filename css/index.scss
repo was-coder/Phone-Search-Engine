@@ -1,0 +1,198 @@
+@import 'standard';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.container {
+    background: #eee;
+    border-radius: 25px 75px;
+    box-shadow: 0 0 10px #000000, 0 10px 10px rgba(0,0,0,0.12);
+    position: relative;
+    overflow: hidden;
+    max-width: 95%;
+    min-height: 500px;
+
+    .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+
+        
+
+    }
+
+    form {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 25px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        input {
+            background: #eee;
+            border: none;
+            padding: 15px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 25px;
+            font-weight: 500;
+            outline: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #3772ff;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.button {
+    border: 2px solid #7e2e84;
+    border-radius: 25px;
+    background: #7e2e84;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 50ms ease-in;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+//Moving signIn and signUp container
+.user-signIn-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.user-signUp-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+//End of moving signIn and signUp container
+
+
+//Start of info styling 
+.info-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+
+    .info {
+        background: #3772ff;
+        background: linear-gradient(to right, #000000, #3772ff) no-repeat / cover;
+        color: #fff;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+
+        .info-panel {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
+
+            marquee {
+                font-size: 25px;
+                font-weight: bolder;
+                color: #7e2e84;
+                text-transform: uppercase;
+            }
+        }
+
+        .info-right {
+            right: 0;
+            transform: translateX(0);
+        }
+        
+        .info-left {
+            transform: translateX(-20%);
+        }
+    }
+}
+//End of info styling 
+
+
+//start of slide in and out
+.container.move-panel .user-signIn-container{
+    transform: translateX(100%);
+}
+
+.container.move-panel .info-container{
+    transform: translateX(-100%);
+}
+
+.container.move-panel .user-signUp-container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+.container.move-panel .info{
+    transform: translateX(50%);
+}
+
+.container.move-panel .info-left{
+    transform: translateX(0);
+}
+
+.container.move-panel .info-right{
+    transform: translateX(20%);
+}
+//end of sliding in and out
